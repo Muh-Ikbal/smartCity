@@ -55,7 +55,7 @@ const AboutSection = () => {
             </div>
             <div className="md:grid md:grid-cols-2 gap-5 overflow-hidden py-16 px-4 sm:ps-8 place-items-center">
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -71,7 +71,7 @@ const AboutSection = () => {
                     </p>
                 </motion.div>
                 <motion.div
-                    variants={fadeIn("left", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.7 }}
@@ -88,10 +88,10 @@ const AboutSection = () => {
 
             <div className="bg-[#C7E8F9] bg-opacity-30 relative">
                 <motion.div
-                    variants={fadeIn("top", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{ once: false, amount: 0.7 }}
+                    viewport={{ once: false, amount: 0.6 }}
                     className="hidden sm:flex pt-20 flex-wrap gap-4 lg:gap-12  px-8 items-center justify-center"
                 >
                     {pilarSmartCity.map((value, index) => (
@@ -108,7 +108,7 @@ const AboutSection = () => {
                     ))}
                 </motion.div>
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0 }}

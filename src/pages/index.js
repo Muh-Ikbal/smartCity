@@ -15,7 +15,7 @@ import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col bg-white" style={{ fontFamily:'Axioforma,sans-serif' }}>
+        <main className="flex min-h-screen flex-col overflow-hidden bg-white" style={{ fontFamily:'Axioforma,sans-serif' }}>
             <NavbarSection />
             <Hero />
             <AboutSection id="about" />

@@ -11,7 +11,7 @@ const FooterSection = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.2 }}
-            className="font-sans mt-0 bg-[#F0F8FF] p-5 sm:p-10 relative overflow-hidden"
+            className="font-sans mt-40 bg-[#F0F8FF] px-5 pt-5 sm:px-10 sm:pt-10 relative overflow-hidden"
         >
             <div className="grid grid-cols-1 sm:grid-cols-12 z-20">
                 <div className="sm:col-span-5 z-20">
@@ -92,8 +92,8 @@ const FooterSection = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full mt-10">
-                <div className="flex justify-center gap-4">
+            <div className="w-full mt-3 ">
+                <div className="flex justify-center gap-4 mb-10">
                     <Image
                         src="/kontak-assets/instagram.svg"
                         alt="alt"
@@ -117,7 +117,7 @@ const FooterSection = () => {
                     <p className="text-sm text-center text-black">
                         Copyright &copy; {new Date().getFullYear()} Smart City
                         from ikbal <br />
-                        design by ade sulastric
+                        design by ade sulastri
                     </p>
                 </div>
             </div>

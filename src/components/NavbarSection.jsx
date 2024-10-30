@@ -88,8 +88,13 @@ const NavbarSection = () => {
                     )}
                 </div>
                 <div className="hidden sm:block">
-                    <div className="hidden sm:flex  items-center justify-center h-[57px] w-[170px] cursor-pointer rounded-xl bg-[#3A9DC2] text-center hover:text-white">
-                        <NavLink href={"#contact"} title={"Hubungi Kami"} />
+                    <div className="hidden sm:flex  items-center justify-center hover:text-white">
+                        <Link
+                            href={"#contact"}
+                            className="text-white h-[57px] w-[170px] flex items-center justify-center hover:text-[#343F52] hover:bg-[#E0F4FF] cursor-pointer rounded-xl bg-[#3A9DC2] text-center"
+                        >
+                            Hubungi Kami
+                        </Link>
                     </div>
                 </div>
             </div>

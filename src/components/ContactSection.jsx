@@ -27,7 +27,7 @@ const ContactSection = () => {
             </motion.div>
             <div className="mb-3 sm:pt-2 grid sm:h-[600px] z-20 place-items-start sm:grid-cols-12 mt-12">
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -55,7 +55,7 @@ const ContactSection = () => {
                                 width={50}
                                 height={50}
                             />
-                            <h4 className="text-black font-medium text-[12px]">
+                            <h4 className="text-black font-medium">
                                 Email
                             </h4>
                             <p className="text-[#999999] text-center text-[12px] sm:text-sm whitespace-normal break-words text-wrap mt-4">
@@ -78,7 +78,7 @@ const ContactSection = () => {
                     </div>
                 </motion.div>
                 <motion.div
-                    variants={fadeIn("left", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -125,10 +125,10 @@ const ContactSection = () => {
                                 </label>
                                 <br />
                                 <textarea
-                                    className="w-full h-32 rounded-[5px] border border-[#D9D9D9] mt-3"
+                                    className="w-full p-2 h-32 rounded-[5px] border border-[#D9D9D9] mt-3"
                                     name=""
                                     id="pesan"
-                                    placeholder="tulis pesan anda"
+                                    placeholder="Tulis pesan anda"
                                 ></textarea>
                             </div>
                             <div className="flex items-center justify-center w-full mt-2">
@@ -148,7 +148,7 @@ const ContactSection = () => {
                 className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute -left-8 top-32"
             ></motion.div>
             <motion.div
-                variants={fadeIn("left", 0.2)}
+                variants={fadeIn("down", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.2 }}

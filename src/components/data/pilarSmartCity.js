@@ -9,7 +9,7 @@ const pilarSmartCity = [
         icon: "/smargovernance.svg",
         content: (
             <ul className="flex flex-col gap-5 text-black">
-                <li className="flex items-center gap-2 text-xl sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -26,7 +26,7 @@ const pilarSmartCity = [
                     />
                     <span>Ekosistem TIK SPBE.</span>
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center text-black gap-4 text-xl sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -44,7 +44,7 @@ const pilarSmartCity = [
                     Standar proses bisnis, data, teknologi, dan keamanan
                     informasi.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-black text-xl sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -70,7 +70,7 @@ const pilarSmartCity = [
         icon: "/smartenvironment.svg",
         content: (
             <ul className="flex flex-col gap-5">
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -88,7 +88,7 @@ const pilarSmartCity = [
                     Penata kelolaan lingkungan yang harmonis antar ekosistem
                     yang terkait.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -106,7 +106,7 @@ const pilarSmartCity = [
                     Pengembangan potensi bencana menjadi sumber daya produktif
                     (seperti banjir menjadi sumber listrik).
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -132,7 +132,7 @@ const pilarSmartCity = [
         icon: "/smartbranding.svg",
         content: (
             <ul className="flex flex-col gap-5">
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -150,7 +150,7 @@ const pilarSmartCity = [
                     Mengembangkan branding kota yang tertib, teratur, aman,
                     modern, dan canggih.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -176,7 +176,7 @@ const pilarSmartCity = [
         icon: "/smarteconomy.svg",
         content: (
             <ul className="flex flex-col gap-5">
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -193,7 +193,7 @@ const pilarSmartCity = [
                     />
                     Implementasi cashless.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -211,7 +211,7 @@ const pilarSmartCity = [
                     Interkoneksi sektor ekonomi mikro, medium, dan makro yang
                     aman melalui teknologi tercanggih secara aktual.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -238,7 +238,7 @@ const pilarSmartCity = [
         icon: "/smartliving.svg",
         content: (
             <ul className="flex flex-col gap-5">
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -256,7 +256,7 @@ const pilarSmartCity = [
                     Pengembangan wilayah terpadu antara pemukiman, dunia usaha,
                     dan pendidikan yang terpadu.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -283,7 +283,7 @@ const pilarSmartCity = [
         icon: "/smartsociety.svg",
         content: (
             <ul className="flex flex-col gap-5">
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"
@@ -301,7 +301,7 @@ const pilarSmartCity = [
                     Pengembangan masyarakat digital yang sehat, inovatif, dan
                     produktif.
                 </li>
-                <li className="flex items-center gap-2 text-xl text-black sm:text-3xl lg:text-4xl">
+                <li className="flex items-center gap-4 text-xl text-black sm:text-2xl lg:text-[2rem]">
                     <Image
                         src="/centang.svg"
                         alt="alt"

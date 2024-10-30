@@ -35,7 +35,7 @@ const Testimoni = () => {
                     </p>
                 </motion.div>
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -80,7 +80,7 @@ const Testimoni = () => {
                     </Swiper>
                 </motion.div>
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -91,11 +91,12 @@ const Testimoni = () => {
                         spaceBetween={0}
                         slidesPerView={1}
                         pagination={{ clickable: true }}
+                        className="relative"
                     >
                         {TESTIMONI.map((value, index) => (
                             <SwiperSlide
                                 key={index}
-                                className="sm:px-24 px-2 py-24"
+                                className="sm:px-24 px-2 py-24 z-20"
                             >
                                 <div className="block sm:flex items-center justify-center w-full gap-8">
                                     <div className=" flex items-center justify-center">
@@ -126,13 +127,6 @@ const Testimoni = () => {
             </div>
             <div className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute -left-12 top-8"></div>
             <div className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#3A9DC2] rounded-full absolute -right-12 top-36"></div>
-            <Image
-                className="hidden sm:block absolute top-1/3 left-1/4"
-                src="/kontak-assets/quoteicon.svg"
-                alt="alt"
-                width={100}
-                height={100}
-            />
         </section>
     );
 };

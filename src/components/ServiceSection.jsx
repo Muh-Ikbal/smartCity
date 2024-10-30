@@ -48,7 +48,7 @@ const ServiceSection = () => {
                 </motion.div>
 
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -68,7 +68,7 @@ const ServiceSection = () => {
                 </motion.div>
 
                 <motion.div
-                    variants={fadeIn("left", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -98,10 +98,10 @@ const ServiceSection = () => {
                                                 height={30}
                                             />
                                             <div>
-                                                <h1 className="text-2xl font-medium">
+                                                <h1 className="text-2xl text-black font-medium">
                                                     {item.title}
                                                 </h1>
-                                                <p className="mt-2">
+                                                <p className="mt-2 text-black">
                                                     {item.deskripsi}
                                                 </p>
                                             </div>
@@ -115,7 +115,7 @@ const ServiceSection = () => {
 
                 {/* Mobile Swiper */}
                 <motion.div
-                    variants={fadeIn("right", 0.2)}
+                    variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}
@@ -167,7 +167,7 @@ const ServiceSection = () => {
                 </motion.div>
             </div>
             <motion.div
-                variants={fadeIn("right", 0.2)}
+                variants={fadeIn("down", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.2 }}
