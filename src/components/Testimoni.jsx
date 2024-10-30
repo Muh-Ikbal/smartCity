@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import TESTIMONI from "./data/TESTIMONI";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variant";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
@@ -16,7 +18,13 @@ const Testimoni = () => {
     return (
         <section className="font-sans px-4 sm:px-20 relative overflow-hidden my-8">
             <div className="flex flex-col">
-                <div className="z-20 flex flex-col items-center sm:px-24">
+                <motion.div
+                    variants={fadeIn("down", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="z-20 flex flex-col items-center sm:px-24"
+                >
                     <h1 className="py-8 text-[#343F52] text-4xl sm:text-5xl font-sans text-center relative mx-auto">
                         Testimoni
                         <div className="border-[3px] border-[#FAB758] w-24 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2"></div>
@@ -25,8 +33,14 @@ const Testimoni = () => {
                         Kami bangga berbagi pengalaman para pengguna yang puas
                         dengan layanan kami.
                     </p>
-                </div>
-                <div className="hidden sm:block">
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="hidden sm:block"
+                >
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={0}
@@ -64,8 +78,14 @@ const Testimoni = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </div>
-                <div className="block sm:hidden">
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="block sm:hidden"
+                >
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={0}
@@ -102,7 +122,7 @@ const Testimoni = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </div>
+                </motion.div>
             </div>
             <div className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute -left-12 top-8"></div>
             <div className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#3A9DC2] rounded-full absolute -right-12 top-36"></div>

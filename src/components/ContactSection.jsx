@@ -1,12 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variant";
 const ContactSection = () => {
     return (
         <section
             className="font-sans mb-4 bg-white pt-6 px-4 overflow-hidden relative"
             id="contact"
         >
-            <div className="z-20 flex flex-col items-center ">
+            <motion.div
+                variants={fadeIn("down", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.2 }}
+                className="z-20 flex flex-col items-center "
+            >
                 <h1 className="py-8 text-[#343F52] text-4xl sm:text-5xl lg:text-5xl font-sans text-center relative mx-auto">
                     Kontak
                     <div className="border-[3px] border-[#FAB758] w-24 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2"></div>
@@ -16,9 +24,15 @@ const ContactSection = () => {
                     Hubungi kami untuk informasi lebih lanjut dan konsultasi
                     mengenai layanan Smart City.
                 </p>
-            </div>
-            <div className="mb-3 sm:pt-2 grid sm:h-[650px] z-20 place-items-start sm:grid-cols-12 mt-12">
-                <div className="z-20 sm:h-full sm:col-span-5 w-full sm:px-8 lg:px-16  ">
+            </motion.div>
+            <div className="mb-3 sm:pt-2 grid sm:h-[600px] z-20 place-items-start sm:grid-cols-12 mt-12">
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="z-20 sm:h-full sm:col-span-5 w-full sm:px-8 lg:px-16  "
+                >
                     <div className="hidden sm:flex justify-center  sm:h-full flex-wrap border-[2px] rounded-[10px] border-[#3A9DC2] bg-[#F0F8FF] px-1 py-3  items-center  gap-2 sm:gap-[47px] sm:flex-col sm:px-2 lg:px-4">
                         <div className="flex flex-col items-center">
                             <Image
@@ -41,7 +55,9 @@ const ContactSection = () => {
                                 width={50}
                                 height={50}
                             />
-                            <h4 className="text-black font-medium text-[12px]">Email</h4>
+                            <h4 className="text-black font-medium text-[12px]">
+                                Email
+                            </h4>
                             <p className="text-[#999999] text-center text-[12px] sm:text-sm whitespace-normal break-words text-wrap mt-4">
                                 smartcity@gmail.com
                             </p>
@@ -60,8 +76,14 @@ const ContactSection = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-                <div className="z-20 w-full h-full mt-4 sm:mt-0 sm:pr-8 sm:col-span-7">
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("left", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="z-20 w-full h-full mt-4 sm:mt-0 sm:pr-8 sm:col-span-7"
+                >
                     <div className="px-4 border-[2px] sm:h-full rounded-[10px] text-black border-[#3A9DC2] bg-[#F0F8FF] py-3 sm:p-12 sm:flex-col">
                         <form action="#">
                             <div className="block">
@@ -116,10 +138,22 @@ const ContactSection = () => {
                             </div>
                         </form>
                     </div>
-                </div>
+                </motion.div>
             </div>
-            <div className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute -left-8 top-32"></div>
-            <div className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute left-1/3 bottom-72"></div>
+            <motion.div
+                variants={fadeIn("down", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.2 }}
+                className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute -left-8 top-32"
+            ></motion.div>
+            <motion.div
+                variants={fadeIn("left", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.2 }}
+                className="hidden sm:block w-36 h-36 border-[1px] opacity-50 border-[#FAB758] rounded-full absolute left-1/3 bottom-0"
+            ></motion.div>
             <Image
                 src="/mask.svg"
                 className="absolute top-40 -right-1"

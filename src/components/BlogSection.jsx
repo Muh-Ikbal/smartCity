@@ -4,6 +4,8 @@ import BLOGS from "./data/blog";
 import Image from "next/image";
 import Link from "next/link";
 import CardBlog from "./UI/CardBlog";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variant";
 import {
     Navigation,
     Pagination,
@@ -21,9 +23,18 @@ import "swiper/css/effect-coverflow";
 const BlogSection = () => {
     const [cardActive, setCardActive] = useState(0);
     return (
-        <section className="font-sans bg-[#F0F8FF] py-6 px-4" id="blog">
+        <section
+            className="font-sans bg-[#F0F8FF] relative py-6 px-4"
+            id="blog"
+        >
             <div className="flex flex-col items-center">
-                <div className="z-20 flex flex-col items-center">
+                <motion.div
+                    variants={fadeIn("down", 0.3)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="z-20 flex flex-col items-center"
+                >
                     <h1 className="py-8 text-[#343F52] text-4xl sm:text-5xl lg:text-5xl font-sans text-center relative mx-auto">
                         Blog
                         <div className="border-[3px] border-[#FAB758] w-24 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2"></div>
@@ -34,8 +45,14 @@ const BlogSection = () => {
                         di sini. Jelajahi wawasan seputar inovasi, teknologi,
                         dan inspirasi yang dapat memperkaya pengetahuan Anda!
                     </p>
-                </div>
-                <div className="my-20 w-full sm:px-16 lg:px-16 relative">
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("down", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="my-20 w-full sm:px-16 lg:px-16 relative"
+                >
                     <Swiper
                         effect={"coverflow"}
                         grabCursor={true}
@@ -87,7 +104,7 @@ const BlogSection = () => {
                     >
                         Lihat semua &rarr;
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -3,6 +3,8 @@ import Image from "next/image";
 import layanan from "./data/layanan";
 import ButtonService from "./UI/ButtonService";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variant";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -22,9 +24,18 @@ const ServiceSection = () => {
     const service = layanan.filter((value) => value.id === tab);
 
     return (
-        <section id="service" className="my-24 font-sans relative px-2 sm:px-16">
+        <section
+            id="service"
+            className="my-24 font-sans relative px-2 sm:px-16"
+        >
             <div className="flex flex-col gap-4 items-center">
-                <div className="z-20 flex flex-col items-center sm:px-4 lg:px-24">
+                <motion.div
+                    variants={fadeIn("down", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="z-20 flex flex-col items-center sm:px-4 lg:px-24"
+                >
                     <h1 className="py-8 text-[#343F52] text-4xl sm:text-5xl font-sans text-center relative mx-auto">
                         Layanan
                         <div className="border-[3px] border-[#FAB758] w-24 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2"></div>
@@ -34,9 +45,15 @@ const ServiceSection = () => {
                         pembangunan kota pintar yang berkelanjutan dan berfokus
                         pada peningkatan kualitas hidup masyarakat.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="hidden sm:flex flex-wrap gap-8 justify-center z-30">
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="hidden sm:flex flex-wrap gap-8 justify-center z-30"
+                >
                     {layanan.map((value, index) => (
                         <ButtonService
                             key={index}
@@ -48,9 +65,15 @@ const ServiceSection = () => {
                             {value.title}
                         </ButtonService>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className="hidden sm:block z-20">
+                <motion.div
+                    variants={fadeIn("left", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="hidden sm:block z-20"
+                >
                     {service.map((data, index) => (
                         <div
                             key={index}
@@ -88,10 +111,16 @@ const ServiceSection = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Mobile Swiper */}
-                <div className="block sm:hidden w-full">
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="block sm:hidden w-full"
+                >
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={20}
@@ -135,9 +164,15 @@ const ServiceSection = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </div>
+                </motion.div>
             </div>
-            <div className="h-screen flex relative justify-start items-center z-20">
+            <motion.div
+                variants={fadeIn("right", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.2 }}
+                className="h-screen flex relative justify-start items-center z-20"
+            >
                 <h1 className="text-[#343F52] font-bold text-lg sm:text-4xl lg:text-6xl w-3/4 lg:w-1/2 z-20">
                     Mewujudkan Kota Cerdas untuk Kehidupan yang Lebih Baik
                 </h1>
@@ -176,7 +211,7 @@ const ServiceSection = () => {
                     height={50}
                     className="w-20 sm:w-32 lg:w-52 sm:block absolute  bottom-1/3 sm:top-1/2 right-4 sm:right-8 lg:right-16"
                 />
-            </div>
+            </motion.div>
 
             <Image
                 src="/circle-3.svg"
@@ -194,14 +229,14 @@ const ServiceSection = () => {
             />
             <Image
                 src="/circle-2.svg"
-                className="absolute w-24 top-28 left-[245px] hidden sm:block"
+                className="absolute w-16 top-28 left-[245px] hidden sm:block"
                 alt=""
                 width={200}
                 height={200}
             />
             <Image
                 src="/circle-4.svg"
-                className="absolute w-40 sm:top-1/3 lg:top-1/3 right-14 hidden sm:block"
+                className="absolute w-48 sm:top-1/3 lg:top-1/3 right-14 hidden sm:block"
                 alt=""
                 width={200}
                 height={200}
@@ -211,7 +246,7 @@ const ServiceSection = () => {
                 alt="alt"
                 width={200}
                 height={200}
-                className="w-24  sm:w-52 hidden sm:block absolute top-0 right-14"
+                className="w-24  sm:w-52 hidden sm:block absolute top-0 -right-4"
             />
         </section>
     );

@@ -1,10 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variant";
 
 const FooterSection = () => {
     return (
-        <section className="font-sans mt-0 bg-[#F0F8FF] p-5 sm:p-10 relative overflow-hidden">
+        <motion.section
+            variants={fadeIn("top", 0.7)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="font-sans mt-0 bg-[#F0F8FF] p-5 sm:p-10 relative overflow-hidden"
+        >
             <div className="grid grid-cols-1 sm:grid-cols-12 z-20">
                 <div className="sm:col-span-5 z-20">
                     <div className=" flex items-center gap-2">
@@ -107,13 +115,15 @@ const FooterSection = () => {
                 </div>
                 <div className="mt-5">
                     <p className="text-sm text-center text-black">
-                        Copyright &copy; {new Date().getFullYear()} Smart City from ikbal <br />design by ade sulastric
+                        Copyright &copy; {new Date().getFullYear()} Smart City
+                        from ikbal <br />
+                        design by ade sulastric
                     </p>
                 </div>
             </div>
             <div className="hidden sm:block w-52 h-52 border-[2px] opacity-50 border-[#FAB758] rounded-full absolute -right-20 sm:-left-20 -bottom-16"></div>
             <div className="hidden sm:block w-52 h-52 border-[2px] opacity-50 border-[#3A9DC2] rounded-full absolute sm:-right-20 -top-16"></div>
-        </section>
+        </motion.section>
     );
 };
 

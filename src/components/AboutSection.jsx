@@ -3,6 +3,8 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./UI/TabButton";
 import pilarSmartCity from "@/components/data/pilarSmartCity";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variant";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,7 +26,13 @@ const AboutSection = () => {
     return (
         <section className="mt-10 font-sans" id="about">
             <div className="relative flex sm:flex-col flex-col-reverse items-center">
-                <div className="z-20 flex flex-col items-center">
+                <motion.div
+                    variants={fadeIn("down", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.9 }}
+                    className="z-20 flex flex-col items-center"
+                >
                     <h1 className="py-8 text-[#343F52] text-4xl sm:text-5xl lg:text-5xl font-sans text-center relative mx-auto">
                         Tentang Kami
                         <div className="border-[3px] border-[#FAB758] w-24 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2"></div>
@@ -35,19 +43,25 @@ const AboutSection = () => {
                         berkomitmen untuk membangun infrastruktur digital yang
                         mendukung efisiensi, kenyamanan, dan keberlanjutan.
                     </p>
-                </div>
+                </motion.div>
 
                 <Image
                     src="/mask.svg"
                     alt="alt"
                     width={200}
                     height={200}
-                    className="w-24  sm:w-52 absolute right-14"
+                    className="w-24  sm:w-52 absolute right-8 sm:right-24"
                 />
             </div>
-            <div className="md:grid md:grid-cols-2 gap-5 py-16 px-4 sm:ps-8 place-items-center">
-                <div className="sm:ps-8">
-                    <p className="text-base text-black lg:text-lg">
+            <div className="md:grid md:grid-cols-2 gap-5 overflow-hidden py-16 px-4 sm:ps-8 place-items-center">
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="sm:ps-8"
+                >
+                    <p className="text-base text-justify  text-black lg:text-lg">
                         Dengan fokus pada inovasi dan teknologi, kami
                         menyediakan solusi yang mengintegrasikan berbagai aspek
                         kota, mulai dari tata kelola, lingkungan, transportasi,
@@ -55,17 +69,31 @@ const AboutSection = () => {
                         teknologi canggih, kami terus berupaya menciptakan kota
                         yang lebih cerdas dan ramah bagi semua.
                     </p>
-                </div>
-                <Image
-                    src="/image/about-image.png"
-                    alt="alt"
-                    width={500}
-                    height={378}
-                />
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("left", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.7 }}
+                    className="overflow-hidden"
+                >
+                    <Image
+                        src="/image/about-image.png"
+                        alt="alt"
+                        width={500}
+                        height={378}
+                    />
+                </motion.div>
             </div>
 
             <div className="bg-[#C7E8F9] bg-opacity-30 relative">
-                <div className="hidden sm:flex pt-20 flex-wrap gap-4 lg:gap-12  px-8 items-center justify-center">
+                <motion.div
+                    variants={fadeIn("top", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.7 }}
+                    className="hidden sm:flex pt-20 flex-wrap gap-4 lg:gap-12  px-8 items-center justify-center"
+                >
                     {pilarSmartCity.map((value, index) => (
                         <TabButton
                             key={index}
@@ -78,12 +106,24 @@ const AboutSection = () => {
                             {value.title}{" "}
                         </TabButton>
                     ))}
-                </div>
-                <div className=" hidden sm:block mt-16 ms-3 sm:ms-10 pt-8">
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0 }}
+                    className=" hidden sm:block mt-16 ms-3 sm:ms-10 pt-8"
+                >
                     {pilarSmartCity.find((t) => t.id == tab).content}
-                </div>
+                </motion.div>
 
-                <div className="sm:hidden">
+                <motion.div
+                    variants={fadeIn("down", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.7 }}
+                    className="sm:hidden"
+                >
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={50}
@@ -102,7 +142,7 @@ const AboutSection = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </div>
+                </motion.div>
                 <Image
                     src="/image/background-pilar.png"
                     className="relative bottom-0"
