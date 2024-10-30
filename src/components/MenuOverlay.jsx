@@ -8,9 +8,8 @@ const MenuOverlay = ({ links }) => {
                 {links.map((link, index) => (
                     <div key={index}>
                         <li>
-                            <NavLink href={link.path} title={link.title} />
+                            <NavLink className={'text-white'} href={link.path} title={link.title} />
                         </li>
-                        <div className="h-[1px] w-full absolute left-0 bg-white"></div>
                     </div>
                 ))}
                 <li>

@@ -64,6 +64,7 @@ const NavbarSection = () => {
                                     <NavLink
                                         href={link.path}
                                         title={link.title}
+                                        className={'text-black'}
                                     />
                                 </li>
                             ))}
