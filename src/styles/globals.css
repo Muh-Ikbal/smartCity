@@ -31,7 +31,6 @@ body {
     height: 4rem;
 }
 
-/* Mengubah warna tombol panah saat di-hover */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     background-color: #FAB758;
