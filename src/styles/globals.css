@@ -21,21 +21,3 @@ body {
     font-family: 'Axiforma',sans-serif;
 }
 
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #FAB758;
-    border: 1px solid #FAB758;
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: #FAB758;
-    border: 1px solid #FAB758;
-    color: white; /* Ganti dengan warna yang Anda inginkan saat di-hover */
-}
-
-

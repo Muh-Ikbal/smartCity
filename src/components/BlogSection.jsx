@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import BLOGS from "./data/blog";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "../styles/index.css";
 import CardBlog from "./UI/CardBlog";
-import "@/styles/globals.css";
 import {
     Navigation,
     Pagination,
