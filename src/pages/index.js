@@ -6,7 +6,6 @@ import ServiceSection from "@/components/ServiceSection";
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
 import MapSection from "@/components/MapSection";
-import styles from "../styles/index.css";
 import Testimoni from "@/components/Testimoni";
 // React
 import { motion } from "framer-motion"
